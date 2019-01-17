@@ -1,0 +1,432 @@
+/*********************************************
+
+    General setting of the page style
+
+*********************************************/
+h1, h2, p, ol {
+    margin: 0;
+}
+
+h1, h2, a {
+    color: #00597c;
+}
+
+body {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* function class */
+.hide {
+    display: none;
+}
+
+/* pop up window */
+.outer, .inner {
+    display: none;
+}
+
+.outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(86, 86, 86, .9);
+    z-index: 98;
+}
+
+.inner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: auto;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    padding: 5em;
+    border-radius: .5em;
+}
+
+.inner h2 {
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+.inner p {
+    font-size: 1.2em;
+}
+
+/* button setting */
+#openMore, 
+.question button {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#openMore:hover,
+.question button:hover {
+    background-color: #00597c;
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 -2px 10px #b2b2b2;
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+/*********************************************
+
+    Title
+
+*********************************************/
+.title {
+    background-color: #f6f7f8;
+    display: flex;
+    padding: 2em 3em;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.title img {
+    height: 3em;
+}
+
+/*********************************************
+
+    Introduction of the form
+
+*********************************************/
+.main-intro, .more {
+    width: 90%;
+    margin: 1em auto;
+}
+
+.main-intro {
+    font-size: 1.5em;
+    line-height: 1.6em;
+}
+
+.more h2,
+.more p,
+.question h2 {
+    margin-bottom: .5em;
+}
+
+
+.more h2, .question h2 {
+    font-size: 2em;
+}
+
+.more p {
+    font-size: 1.5em;
+}
+
+.more ol {
+    width: 80%;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-bottom: 1.5em;
+}
+
+.more ol li {
+    margin-bottom: .5em;
+}
+
+#openMore {
+    font-size: 1.5em;
+    margin-left: 3em;
+    display: inline-block;
+    border: 1px solid;
+    padding: .5em 2em;
+    border-radius: 2em;
+}
+
+/*********************************************
+
+    Questions
+
+*********************************************/
+.questionContainer {
+    background-color: #f6f7f8;
+    padding: 1em 0 2em;
+    margin-top: 2em;
+}
+
+.question {
+    width: 90%;
+    margin: 2em auto;
+}
+
+.question li {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.question input[type="radio"] {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.question button {
+    font-size: 1.2em;
+    padding: .8em 2em;
+    border-radius: 2em;
+    color: #00597c;
+    background-color: #fff;
+    border: 1px solid;
+    margin-right: 1em;
+}
+
+/*********************************************
+
+    Production Introduction
+
+*********************************************/
+.product {
+    display: flex;
+    padding: 2em 3em;
+}
+
+.product>div {
+    width: 50%;
+    padding: 5em 0;
+}
+
+.product p {
+    width: 80%;
+    height: 12em;
+    background-color: #fff;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    padding: 1.8em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.product .control {
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    background-image: url(../image/Neurofolin_Product.jpg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: flex-end;
+}
+
+.product a {
+    padding-bottom: .5em;
+    display: inline-block;
+}
+
+.product a:hover {
+    border-bottom: 3px solid;
+    font-weight: bold;
+}
+
+/*********************************************
+
+    footer
+
+*********************************************/
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #00597c;
+    padding: 1em;
+}
+
+footer p, footer a {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+footer p {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*********************************************
+
+    media query
+
+*********************************************/
+@media only screen and (max-width: 1200px) {
+    .product {
+        justify-content: space-between;
+    }
+
+    .product div {
+        width: 45%;
+    } 
+    
+    .product p {
+        width: 100%;
+    }
+    
+    .product .control {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .title img {
+        height: 2.5em;
+    }
+    
+    .main-intro {
+        font-size: 1.6em;
+        line-height: 1.7em;
+    }
+    
+    .more h2, .question h2 {
+        font-size: 2.5em;
+    }
+    
+    .more p {
+        font-size: 1.8em;
+    }
+
+    .more ol {
+        font-size: 1.5em;
+        line-height: 1.6em;
+    }
+
+    #openMore {
+        font-size: 1.8em;
+        width: 50%;
+        margin-left: 0;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .question li {
+        font-size: 1.5em;
+        line-height: 1.6em;
+    }
+    
+    .question button {
+        font-size: 1.8em;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: .5em;
+    }
+    
+    .product {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        margin-top: 5em;
+    }
+    
+    .product div {
+        width: 100%;
+    }
+    
+    .product p {
+        height: auto;
+        font-size: 1.5em;
+        line-height: 1.6em;
+    }
+    
+    .product .control {
+        height: 20em;
+        margin-top: -20em;
+    }
+    
+    .inner p {
+        word-wrap: break-word;
+    }
+    
+    .inner h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+    
+    .main-intro {
+        font-size: 2em;
+        line-height: 2.1em;
+    }
+
+    .more ol {
+        font-size: 1.8em;
+        line-height: 1.6em;
+    }
+    
+    .question li {
+        font-size: 2em;
+        line-height: 2.1em;
+    }
+    
+    .product {
+        margin-top: 20em;
+    }
+    
+    .product p {
+        font-size: 2em;
+        line-height: 2.1em;
+    }
+    
+    .product .control {
+        margin-top: -32em;
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 30em;
+    }
+    
+    .inner h2 {
+        font-size: 2.8em;
+    }
+
+    .inner p {
+        font-size: 1.8em;
+    }
+    
+    .inner h3 {
+        font-size: 2em;
+    }
+}
